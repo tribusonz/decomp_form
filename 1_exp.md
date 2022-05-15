@@ -260,3 +260,39 @@ $\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} a+b \neq s+b \neq e^{a}$
 　ピタゴラス数との一致は指数分解の解に現れるものなのであって，単なる偶然の一致である。そのため自然数の総和が分解公式に直接的な関係をもたらしているとはいいがたい。  
 　解を以て行列式に評価すると，天井の2を定数$e$としたときは床の1は$\ln(2)$となり，傾斜として得て自然対数が成り立ち，このとき$\ln(2)$の指数は対数にとって底ということができる。指数は天井なので床がないことから底ということもないし解も持っていない関係がある。  
 　また指数には床がないからこそ，基底2の床関数1が不等式である根拠も確認できる。つまり指数・対数において基底1は存在しない。  
+
+　逆元は代数方程式であると考えると，その微分は *t^x* であろう。ラプラス変換で逆元定理を考えると  
+
+$\int_0^\infty t^x \cdot e^{-st} \cdot dt$
+$=\frac{1}{s^x} \int_0^\infty (st)^x \cdot e^{-st} \cdot dt$
+
+　を得る。  
+
+　ここで$st$を$\tau$に置き換えて積分を考えれば  
+
+$= \frac{1}{s^x}\int_0^\infty(st)^x \cdot e^{-st} \cdot dt \cdot \frac{d\tau}{dt} \cdot \frac{dt}{d\tau}$  
+$= \frac{1}{s^x} \int_0^\infty \tau^{x} \cdot e^{-t} \cdot d\tau \cdot \frac{1}{s}$  
+$= \frac{1}{s^{x+1}} \int_0^\infty \tau^x \cdot e^{-t} \cdot d\tau$  
+
+　と代入する。ここで，この積分は定数として収束するが，一般には不完全ガンマ関数 *incomplete gamma function* の積分表示式である。ガンマ関数は指数の極限でもあるため，積分では一般にガンマ関数が関係する。  
+
+　この関係を無限級数に導入すると  
+
+ $\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=1}^{\infty} a!+b!+c \neq s!+b!+c \neq e^{a}$
+
+　が成り立つ。
+　ただし，ガンマ積分は定数項について収束するので  
+ 
+ $e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} a!+b!+c \neq s!+b!+c, a\subseteq \left\lfloor x \right\rfloor-x$
+
+　と変形する。このとき係数aの収束半径は $\left| \frac{a_n}{a_{n+1}} \right|$　と置くと，不等式は
+ 
+$e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{1 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} \frac{b}{c!}a^c, a\subseteq \left\lfloor x \right\rfloor-x, s > b$
+
+　に還元される。  
+　仮数部を求める際，$a_n=\frac{1}{n!}$であるから，
+
+ $\displaystyle \sum_{c=0}^{\infty} \frac{1}{c!}x^n = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+\cdots$
+
+　により定まることから，近似式はテイラー展開に持っていける。  
+ 
