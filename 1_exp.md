@@ -280,17 +280,17 @@ $= \frac{1}{s^{x+1}} \int_0^\infty \tau^x \cdot e^{-t} \cdot d\tau$
 
  $\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=1}^{\infty} a!+b!+c \neq s!+b!+c \neq e^{a}$
 
-　が成り立つ。
+　が成り立つ。  
 　ただし，ガンマ積分は定数項について収束するので  
  
  $e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} a!+b!+c \neq s!+b!+c, a\subseteq \left\lfloor x \right\rfloor-x$
 
-　と変形する。このとき係数aの収束半径は $\left| \frac{a_n}{a_{n+1}} \right|$　と置くと，不等式は
+　と変形する。このとき係数aの収束半径は $\left| \frac{a_n}{a_{n+1}} \right|$　と置くと，不等式は  
  
 $e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{1 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} \frac{b}{c!}a^c, a\subseteq \left\lfloor x \right\rfloor-x, s > b$
 
 　に還元される。  
-　仮数部を求める際，$a_n=\frac{1}{n!}$であるから，
+　仮数部を求める際，$a_n=\frac{1}{n!}$であるから，  
 
  $\displaystyle \sum_{c=0}^{\infty} \frac{1}{c!}x^n = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+\cdots$
 
