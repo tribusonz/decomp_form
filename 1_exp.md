@@ -274,7 +274,7 @@ $= \frac{1}{s^x}\int_0^\infty(st)^x \cdot e^{-st} \cdot dt \cdot \frac{d\tau}{dt
 $= \frac{1}{s^x} \int_0^\infty \tau^{x} \cdot e^{-t} \cdot d\tau \cdot \frac{1}{s}$  
 $= \frac{1}{s^{x+1}} \int_0^\infty \tau^x \cdot e^{-t} \cdot d\tau$  
 
-　と代入する。ここで，この積分は定数として収束するが，一般には不完全ガンマ関数 *incomplete gamma function* の積分表示式である。ガンマ関数は指数の極限でもあるため，積分では一般にガンマ関数が関係する。  
+　と代入する。ここで，$\int_0^\infty \tau^x \cdot e^{-t} \cdot d\tau$は定数として収束するが，一般にはガンマ関数 *gamma function* の積分表示式である。ガンマ関数は指数の極限でもあるため，積分では一般にガンマ関数が関係する。  
 
 　この関係を無限級数に導入すると  
 
