@@ -2,7 +2,7 @@
 
 　筆者が初等関数の数値計算について様々な解析・研究をするに，指数分解にある変数xは分解能 *resolving power* に従っていることを突き止めた。これは複素解析学 *complex analytics* でいうところのノルム *norm* $\sqrt{x^2+y^2}$ と類似な関係を持ち，その周期性は累乗根 *power root* について有利関数近似 *rational function approximation* に等しくなる。  
 　これにはリーマン球面 *riemann sphere* で言及されるような多価関数 *manyvalued function* があり，無論，発見した対象も対数関数 *logarithmic funcyion* であった。われわれはこれを基数相補法 *radix complementation method* と呼んでいる。  
-　基数相補法でこれは有理近似による展開，いうなればn次連立方程式 *nth order simultaneous equations* によっている。この関係は特徴的で，条件数 *condition number* こそスケーリング係数 *scaling factor* としてn次方程式が連立しているものの，解析接続 *analytic continuation* されるような多価性は持っていない。n次方程式が係数について連立しているのである。これは，ある分解能に従っていては方程式は形を変えず基数に相補して解を導出している。  
+　基数相補法でこれは有理近似による展開，いうなればn次連立方程式 *nth order simultaneous equations* によっている。この関係は特徴的で，条件数 *condition number* こそスケーリング係数 *scaling factor* としてn次方程式が連立しているものの，解析接続 *analytic continuation* されるような多価性は持っていない。n次方程式が係数について連立しているのである。これは，ある分解能に従っていては方程式は形を変えず基数に相補して解を導出している。解析に現れる変数は，通常数学で求めるものよりも，物理学の傾向が強い。  
 　では逆関数をn次連立方程式の観点から見てみる。対数は0と1からなる1から始まる1と2の世界であるが，逆関数 $e_{2}(x)$ でもこの関係は明らかであろう。  
 
 　`Ruby`で`map`を使い、これを示す。`map`は昔からあるメソッドであるが，最新の`Python`でもイテレーション機能として採用されている。  
