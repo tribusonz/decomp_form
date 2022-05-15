@@ -296,3 +296,93 @@ $e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{1 \to a} \sum_{b=e}^{s} \s
 
 　により定まることから，近似式はテイラー展開に持っていける。  
  
+　以下に`Python`と`Ruby`の実装例を示す。無理級数は数値計算では機械定数による打ち切り誤差 *truncation error* が好まれるため，機械エプシロン$\epsilon$で精度を保つようにする。  
+ 
+Python:  
+```
+# Exponential Decomposition Formula for Python
+
+import math
+import sys
+
+LOG2 = 0.693147180559945309417232121
+E = 2.718281828459045235360287471
+MAX_2_EXP = sys.float_info.max_10_exp // 0.301029995663981
+MIN_2_EXP = sys.float_info.min_10_exp // 0.301029995663981
+MAX_E_EXP = sys.float_info.max_10_exp // 0.434294481903251
+MIN_E_EXP = sys.float_info.min_10_exp // 0.434294481903251
+
+def __expxt(x, t):
+    a = x * t
+    b = c = s = 1.0
+    while True:
+        b = b * a / c
+        if not b > sys.float_info.epsilon:
+            break
+        s = s + b
+        c = c + 1
+    return s
+
+def exp2(x):
+    if x < MIN_2_EXP:
+        return 0.0
+    elif x > MAX_2_EXP:
+        return float('inf')
+    floorx = math.floor(x)
+    vfra = x - floorx
+    vexp = 2 ** floorx
+    if vfra == 0.0:
+        return float(vexp)
+    return vexp * __expxt(vfra, LOG2)
+
+def exp(x):
+    if x < MIN_E_EXP:
+        return 0.0
+    elif x > MAX_E_EXP:
+        return float('inf')
+    floorx = math.floor(x)
+    vfra = x - floorx
+    vexp = E ** floorx
+    if vfra == 0.0:
+        return float(vexp)
+    return vexp * __expxt(vfra, 1.0)
+```
+
+Ruby:  
+```
+# frozen_string_literal: true
+
+module Math
+  LOG2 = log(2)
+  
+  def expxt(x, t)
+    a = x * t; b = 1.0; c = 1.0; s = 1.0;
+    loop do
+      b = b * a / c;
+      unless b > Float::EPSILON; break; end
+      s = s + b;
+      c = c + 1
+    end
+    s
+  end
+  
+  def exp(x) # Overridden
+    floorx = x.floor
+    vfra = x - floorx
+    vexp = E ** floorx
+    if (vfra == 0.0) then return vexp.to_f; end
+    vexp * expxt(vfra, 1)
+  end
+
+  def exp2(x)
+    floorx = x.floor
+    vfra = x - floorx
+    vexp = 2 ** floorx
+    if (vfra == 0.0) then return vexp.to_f; end
+    vexp * expxt(vfra, LOG2)
+  end
+  
+  protected :expxt
+  module_function :exp, :exp2, :expxt
+end
+```
