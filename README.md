@@ -1,4 +1,4 @@
-# 分解公式
+# 分解公式 (Decomposition Formula)
 
 初等関数の分解公式集です。
 
