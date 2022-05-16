@@ -295,7 +295,12 @@ $e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{1 \to a} \sum_{b=e}^{s} \s
  $\displaystyle \sum_{c=0}^{\infty} \frac{1}{c!}x^n = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+\cdots$
 
 　により定まることから，近似式はテイラー展開に持っていける。  
+　分解公式は物理学に傾倒している節があるため，数学的見解に帰納させれば，
  
+ $f(x)=a^{\text{IntegerPart}(x)}\cdot\exp_b^{\text{FractionPart}(x)},a\subset e=e|2=2, b\subset e=1|2=\ln{2}$  
+
+　と置ける。  
+
 　以下に`Python`と`Ruby`の実装例を示す。無理級数は数値計算では機械定数による打ち切り誤差 *truncation error* が好まれるため，機械エプシロン$\epsilon$で精度を保つようにする。  
  
 Python:  
