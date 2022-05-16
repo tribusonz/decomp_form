@@ -203,4 +203,9 @@ pp t4.map{|x| 16.divmod(x)}
 |近接整数|床関数|天井関数|
 |分解公式|分解能と分解率|商と剰余|
 
+　基数相補法は物理学の傾向が強く，単純数式に現わすとなると説明のために一冊の本が書けそうな規模である。実際，対数関数の分解公式をまとめようにも  
+
+$f(x)\equiv s\subseteq (ab)=\log_b^{\text{rcm}_a^{\text{Fraction}|x|}}+\text{rcm}_a^{\text{Exponent}|x|}, a=b=\text{Radix}$  
+
+　といった専門数学でも難しい式が書けてしまう。  
 
