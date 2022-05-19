@@ -17,3 +17,20 @@ $\frac{2^x}{2}-x, \text{but}\, 1 \leq x \leq 2$
 $\log_2(1+x) - (\sqrt{1+3x}-1), \text{But}\, 0 \leq x \leq 1$
 
 　この解は0を連続しないため，累乗根を積分に持つことが分かる。  
+　逆元の主値は実数全体で一価な負の値であり，対数逆元の主値は実数全体で一価な正の値である。特性とも言えるこれはオイラー・ガンマ積分に類似した特徴がある。また，各々主値をフォーカスしてプロットしてみると，三角関数で見受けるような相対性を確認できる。  
+　gluplotで以下をタイプしプロットしてみる。
+
+```
+set grid
+set size ratio -1
+log2(x) = log(x)/log(x)
+linvelem(x) = log2(1+x)-x
+invelem(x) = 2**x/2-x
+plot [-2:4] [-4:4] invelem(x), linvelem(x)
+```
+
+　以下を得られる。  
+
+![invelem_plot](invelem_plot.png)
+
+　[Wolfram alpha](https://www.wolframalpha.com/input?i2d=true&i=Divide%5BPower%5B2%2Cx%5D%2C2%5D-x%5C%2844%29+log2%5C%2840%291%2Bx%5C%2841%29-x)に尋ねてみると，高次な多価関数であるためか，リーマン・ゼータ関数のクリティカル・ラインで確認できるようなパラメトリック曲線を持つことが分かる。  
