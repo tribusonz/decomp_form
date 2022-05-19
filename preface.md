@@ -207,7 +207,7 @@ pp t4.map{|x| 16.divmod(x)}
 
 　本来は発見した対象である対数の分解公式から述べるべきであろう。しかしながら，基数相補法は物理学の傾向が強く，単純数式に現わすとなると説明のために一冊の本が書けそうな規模である。実際，対数関数の分解公式をまとめようにも  
 
-$f(x)\equiv s\subseteq (ab)=\log_b^{\text{rcm}_a^{\text{Fraction}|x|}}+\text{rcm}_a^{\text{Exponent}|x|}, a=b=\text{Radix}$  
+$\log^\prime(x)\equiv s\subseteq (ab)=\log_b^{\text{rcm}_a^{\text{Fraction}|x|}}+\text{rcm}_a^{\text{Exponent}|x|}, a=b=\text{Radix}$  
 
 　といった専門数学でも難しい式が書けてしまう。  
 　そのため指数関数から述べることとする。指数の分解公式から説明したほうが，対数の分解公式がよりよく見えてくるだろう。
