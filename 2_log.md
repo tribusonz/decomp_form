@@ -23,7 +23,7 @@ $\log_2(1+x) - (\sqrt{1+3x}-1), \text{But}\, 0 \leq x \leq 1$
 ```
 set grid
 set size ratio -1
-log2(x) = log(x)/log(x)
+log2(x) = log(x)/log(2)
 linvelem(x) = log2(1+x)-x
 invelem(x) = 2**x/2-x
 plot [-2:4] [-4:4] invelem(x), linvelem(x)
