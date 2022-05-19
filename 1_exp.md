@@ -297,7 +297,7 @@ $e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{1 \to a} \sum_{b=e}^{s} \s
 　により定まることから，近似式はテイラー展開に持っていける。  
 　分解公式は物理学に傾倒している節があるため，数学的見解に帰納させれば，
  
- $f(x)\equiv s\subseteq (ab)=a^{\text{IntegerPart}(x)}\cdot\exp_b^{\text{FractionPart}(x)},a=(\exp\therefore e|\exp2\therefore 2), b=(\exp_e\therefore1|\exp_2\therefore\ln{2})$  
+ $\exp^\prime(x)\equiv s\subseteq (ab)=a^{\text{IntegerPart}(x)}\cdot\exp_b^{\text{FractionPart}(x)},a=(\exp\therefore e|\exp2\therefore 2), b=(\exp_e\therefore1|\exp_2\therefore\ln{2})$  
 
 　と置くことができ，これはオイラーの公式が正則であることが分かる。  
 
