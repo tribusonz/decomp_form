@@ -210,7 +210,7 @@ $$\sqrt{2}$$
 
 　と等価なのは  
 
-$$x=\frac{\ln(2)+4\imath\pi{n}}{2\ln(2)},\,n\in\mathbb{Z}$$
+$$x=\frac{\ln(2)+4\imath\pi{n}}{2\ln(2)},\quadn\in\mathbb{Z}$$
 
 　として偶然に一致しているため，導関数になることはあっても参照値にすぎていない節がある。  
 
@@ -261,29 +261,34 @@ $$\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} a+b \neq s+b \neq e^{a}$$
 　解を以て行列式に評価すると，天井の2を定数$e$としたときは床の1は$\ln(2)$となり，傾斜として得て自然対数が成り立ち，このとき$\ln(2)$の指数は対数にとって底ということができる。指数は天井なので床がないことから底ということもないし解も持っていない関係がある。  
 　また指数には床がないからこそ，基底2の床関数1が不等式である根拠も確認できる。つまり指数・対数において基底1は存在しない。  
 
-　逆元は代数方程式であると考えると，その微分は *t^x* であろう。ラプラス変換で逆元定理を考えると  
+　逆元は積分に満足しているのは自明であろう。この指数関数を $\exp^\prime(x)$ と定義する。この関数式が積分に満足するということは，微分にも満足しているはずである。逆元は代数方程式であると考えると，その微分は $t^x$ であろう。ラプラス変換で逆元定理を考えると  
 
-$\int_0^\infty t^x \cdot e^{-st} \cdot dt$
-$=\frac{1}{s^x} \int_0^\infty (st)^x \cdot e^{-st} \cdot dt$
+$$\int_0^\infty t^x \cdot e^{-st} \cdot dt,$$
+$$=\frac{1}{s^x} \int_0^\infty (st)^x \cdot e^{-st} \cdot dt,$$
 
 　を得る。  
 
 　ここで$st$を$\tau$に置き換えて積分を考えれば  
 
-$= \frac{1}{s^x}\int_0^\infty(st)^x \cdot e^{-st} \cdot dt \cdot \frac{d\tau}{dt} \cdot \frac{dt}{d\tau}$  
-$= \frac{1}{s^x} \int_0^\infty \tau^{x} \cdot e^{-t} \cdot d\tau \cdot \frac{1}{s}$  
-$= \frac{1}{s^{x+1}} \int_0^\infty \tau^x \cdot e^{-t} \cdot d\tau$  
+$$
+\begin{array}{rcl}
+ & = & \frac{1}{s^x}\int_0^\infty(st)^x \cdot e^{-st} \cdot dt \cdot \frac{d\tau}{dt} \cdot \frac{dt}{d\tau} \\
+ & = & \frac{1}{s^x} \int_0^\infty \tau^{x} \cdot e^{-t} \cdot d\tau \cdot \frac{1}{s} \\
+ & = & \frac{1}{s^{x+1}} \int_0^\infty \tau^x \cdot e^{-t} \cdot d\tau
+\end{array}
+$$
 
 　と代入する。ここで，$\int_0^\infty \tau^x \cdot e^{-t} \cdot d\tau$は定数として収束するが，一般にはガンマ関数 *gamma function* の積分表示式である。ガンマ関数は指数の極限でもあるため，積分では一般にガンマ関数が関係する。  
 
+　微分方程式によって積$s$が変数$\tau$として満足するのであれば，$\exp^\prime(x)\equiv s\tau$で合同である。  
 　この関係を無限級数に導入すると  
 
-$$\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=1}^{\infty} a!+b!+c \neq s!+b!+c \neq e^{a}$$
+$$\exp^\prime(x) \equiv \displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=1}^{\infty} a!+b!+c \neq s!+b!+c \neq e^{a}$$
 
 　が成り立つ。  
 　ただし，ガンマ積分は定数項について収束するので  
  
-$$e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} a!+b!+c \neq s!+b!+c, a\subseteq \left\lfloor x \right\rfloor-x$$
+$$\exp^\prime(x) \equiv e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} a!+b!+c \neq s!+b!+c, a\subseteq \left\lfloor x \right\rfloor-x$$
 
 　と変形する。このとき係数aの収束半径は $\left| \frac{a_n}{a_{n+1}} \right|$　と置くと，不等式は  
  
