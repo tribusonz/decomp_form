@@ -210,7 +210,7 @@ $$\sqrt{2}$$
 
 　と等価なのは  
 
-$$x=\frac{\ln(2)+4\imath\pi{n}}{2\ln(2)},\quadn\in\mathbb{Z}$$
+$$x=\frac{\ln(2)+4\imath\pi{n}}{2\ln(2)},\quad n\in\mathbb{Z}$$
 
 　として偶然に一致しているため，導関数になることはあっても参照値にすぎていない節がある。  
 
@@ -304,7 +304,7 @@ $$\displaystyle \sum_{c=0}^{\infty} \frac{1}{c!}x^n = 1+x+\frac{x^2}{2!}+\frac{x
  
 $$\exp^\prime(x)\equiv s\subseteq (ab)=a^{\text{IntegerPart}(x)}\cdot\exp_b^{\text{FractionPart}(x)},a=(\exp\therefore e|\exp2\therefore 2), b=(\exp_e\therefore1|\exp_2\therefore\ln{2})$$
 
-　と置くことができ，これはオイラーの公式が正則であることが分かる。  
+　と置くことができ，これはオイラーの公式 $e^{\imath\theta}=\cos\theta+\imath\sin\theta$ が正則であることが分かる。  
 
 　以下に`Python`と`Ruby`の実装例を示す。無理級数は数値計算では機械定数による打ち切り誤差 *truncation error* が好まれるため，機械エプシロン$\epsilon$で精度を保つようにする。  
  
