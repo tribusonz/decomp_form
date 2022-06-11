@@ -91,11 +91,11 @@ exp2l(): -16446..16384 (Logical: -16380..16383)
  　指数法則などでよく見受ける商と剰余，合同式は，この分解公式では有理関数近似として自明である。この自明は特に平方数和に現れる。  
 　二進指数でこれを考えよう。平方数和は二進指数について  
 
-$2^{x} = 2^{\sqrt(x)^{2}}$
+$$2^{x} = 2^{\sqrt(x)^{2}}$$
 
 　を成り立たせていることを示しており，したがって  
 
-$x = \sqrt{x}^{2}$
+$$x = \sqrt{x}^{2}$$
 
 　で自明である。  
 
@@ -202,15 +202,15 @@ exp2(5+0.5) = 2^5 * 2^0.5 = 45.254834...
 　近似式では，この真数の逆元とは無限級数が2のべき乗と等しいとき累乗の総和が二項係数として有理数にはっきりと現れる。くしくも$\sqrt{2}$のような無理数は真数ともなって，実数の主要根を解にする。ここで，自然指数と自然対数は自然数との計算に併用して用いられるところではあるが，関数自体は自然数を持っているとはいいがたく，解として得られたところの累乗根に有理数の現れが自明という性質を持つものなのである。  
 　なお有理関数近似で二進は二乗根・常用は三乗根を各々整数根として持つのだが，  
 
-$2^{\frac{1}{2}}$
+$$2^{\frac{1}{2}}$$
 
 　が  
 
-$\sqrt{2}$
+$$\sqrt{2}$$
 
 　と等価なのは  
 
-$x=\frac{\ln(2)+4\imath\pi{n}}{2\ln(2)},\,n\in\mathbb{Z}$
+$$x=\frac{\ln(2)+4\imath\pi{n}}{2\ln(2)},\,n\in\mathbb{Z}$$
 
 　として偶然に一致しているため，導関数になることはあっても参照値にすぎていない節がある。  
 
@@ -242,7 +242,7 @@ exp(5+0.5) = e^5 * e^0.5 = 244.692...
 　指数・対数の関係について，仮数部は全て無理数であることから，自然数とこれが重なるのは偶然の一致である。これの有理関数近似は興味深いほどシンメトリなのであって，指数にはないものは対数にはあって，逆に対数にないものは指数にはある。  
 　対数ではn次連立な和集合であるが，指数は無限級数な積集合である。積集合は分解されるaとbにつき，否定的な対象性を持つ。この関係は特異なので，積集合は以下のような無理級数展開が成り立つ。  
 
-$\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} a+b \neq s+b \neq e^{a}$
+$$\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} a+b \neq s+b \neq e^{a}$$
 
 　ここに名づけるとすれば「逆元定理 *inverse element's theorem* 」である。重みづけする係数aとbの加法が条件数として係数sにbを加算するのとが不一致であれば，eのa乗とも不一致である。  
 　有理数としては複素数値計算になじみ深い整数環が近似するので，オイラーの公式 $e^{\imath\theta}=\cos\theta+\imath\sin\theta$ からすれば，リーマン球面や虚数根，絶対値(偏角)などの実数の根を期待しがちだが，係数は行列の積であり，オイラー積分とも強い関係を持つに至る。  
@@ -278,26 +278,26 @@ $= \frac{1}{s^{x+1}} \int_0^\infty \tau^x \cdot e^{-t} \cdot d\tau$
 
 　この関係を無限級数に導入すると  
 
- $\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=1}^{\infty} a!+b!+c \neq s!+b!+c \neq e^{a}$
+$$\displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=1}^{\infty} a!+b!+c \neq s!+b!+c \neq e^{a}$$
 
 　が成り立つ。  
 　ただし，ガンマ積分は定数項について収束するので  
  
- $e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} a!+b!+c \neq s!+b!+c, a\subseteq \left\lfloor x \right\rfloor-x$
+$$e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{0 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} a!+b!+c \neq s!+b!+c, a\subseteq \left\lfloor x \right\rfloor-x$$
 
 　と変形する。このとき係数aの収束半径は $\left| \frac{a_n}{a_{n+1}} \right|$　と置くと，不等式は  
  
-$e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{1 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} \frac{b}{c!}a^c, a\subseteq \left\lfloor x \right\rfloor-x, s > b$
+$$e^{\left\lfloor x \right\rfloor} \displaystyle \lim_{1 \to a} \sum_{b=e}^{s} \sum_{c=0}^{\infty} \frac{b}{c!}a^c, a\subseteq \left\lfloor x \right\rfloor-x, s > b$$
 
 　に還元される。  
 　仮数部を求める際，$a_n=\frac{1}{n!}$であるから，  
 
- $\displaystyle \sum_{c=0}^{\infty} \frac{1}{c!}x^n = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+\cdots$
+$$\displaystyle \sum_{c=0}^{\infty} \frac{1}{c!}x^n = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+\cdots$$
 
 　により定まることから，近似式はテイラー展開に持っていける。  
 　分解公式は物理学に傾倒している節があるため，数学的見解に帰納させれば，
  
- $\exp^\prime(x)\equiv s\subseteq (ab)=a^{\text{IntegerPart}(x)}\cdot\exp_b^{\text{FractionPart}(x)},a=(\exp\therefore e|\exp2\therefore 2), b=(\exp_e\therefore1|\exp_2\therefore\ln{2})$  
+$$\exp^\prime(x)\equiv s\subseteq (ab)=a^{\text{IntegerPart}(x)}\cdot\exp_b^{\text{FractionPart}(x)},a=(\exp\therefore e|\exp2\therefore 2), b=(\exp_e\therefore1|\exp_2\therefore\ln{2})$$
 
 　と置くことができ，これはオイラーの公式が正則であることが分かる。  
 
